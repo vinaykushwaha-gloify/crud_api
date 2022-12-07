@@ -86,7 +86,7 @@ class TaskCreate(APIView):
                 "message":"task created successfully"
             },status=status.HTTP_201_CREATED)
 
-class ShowAllTask(ListAPIView):
+class ShowAllTask(APIView):
     '''This api is use List all task'''
 
     permission_classes = [IsAuthenticated]
