@@ -9,7 +9,6 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import authenticate
 from django.http import Http404
-from rest_framework.generics import ListAPIView
 # Create your views here.
 
 class SignUpUserView(APIView):

@@ -8,6 +8,7 @@ from api.managers import UserManager
 class User(AbstractBaseUser,PermissionsMixin):
     def validateEmail(email):
         if len(email) > 6:
+            print(email,"11=-----------")
             if re.match(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', email) != None:
                 return email
             else:

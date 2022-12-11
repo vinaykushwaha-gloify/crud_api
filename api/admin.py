@@ -3,11 +3,11 @@ from api.models import *
 # Register your models here.
 
 class UserAdmin(admin.ModelAdmin):
-    def get_queryset(self, request):
-        qa = User.objects.filter(is_superuser = False)
-        if qa:
-            return qa
-        return False
+    # def get_queryset(self, request):
+    #     qa = User.objects.filter(is_superuser = False)
+    #     if qa:
+    #         return qa
+    #     return False
     fields = ['email','name','phone_number','password']
     list_display = ['id','email','name','phone_number','is_staff','created_date','updated_date']
 admin.site.register(User,UserAdmin)
